@@ -1,0 +1,95 @@
+﻿<!-- (*) assigned classes -->
+<ion-view view-title="{{Title}}">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear btn-header-icon" ng-show="!enableCrop" ng-click="$ionicGoBack()">
+            חזור
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon btn-header-icon" ng-show="!enableCrop" ng-click="SaveUser()">
+            שמור
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content>
+        <!-- *view-profile / container -->
+        <div class="view-profile">
+            <!-- *profile-bg / background color -->
+            <div class="profile-bg">
+                <div ng-if="enableCrop" class="cropArea small">
+                    <img-crop image="imageDataURI"
+                              result-image="$parent.resImageDataURI"
+                              change-on-fly="false"
+                              area-type="circle"
+                              area-min-size="170"
+                              result-image-format="image/png"
+                              result-image-quality="1"
+                              result-image-size="200"
+                              on-change="onChange($dataURI)"
+                              on-load-begin="onLoadBegin()"
+                              on-load-done="onLoadDone()"
+                              on-load-error="onLoadError()">
+                    </img-crop>
+                    <div class="row button-crop-bar">
+                        <div class="col col-50">
+                            <button class="button button-light button-outline" ng-click="onSelectCropedImage()">
+                                בחר
+                            </button>
+                        </div>
+                        <div class="col col-50">
+                            <button class="button button-light button-outline" ng-click="onCancelCropedImage()">
+                                ביטול
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <a class="item item-avatar" nav-clear ngf-select="handleFileSelect($file)" name="file" ngf-pattern="'image/*'"
+                   ngf-accept="'image/*'" ngf-max-size="5MB">
+                    <!-- *content-img / container -->
+                    <div class="content-img">
+                        <img ng-src="{{UserData.ProfileImage}}">
+                        <!-- *bg-img -->
+                        <div class="bg-img"></div>
+                    </div>
+                    <h2>מוחמד בדיר</h2>
+                    <p>מנהל מערכת</p>
+                </a>
+            </div>
+            <!-- button bar with style FOLLOWER / FOLLOWING -->
+            <div class="button-bar">
+                <a class="button" href="#/app/followers">
+                    <h2>13520</h2>
+                    <p>FOLLOWER</p>
+                </a>
+                <a class="button">
+                    <h2>2450</h2>
+                    <p>FOLLOWING</p>
+                </a>
+            </div>
+            <!-- list with inputs style -->
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                    <ion-label>שם פרטי</ion-label>
+                    <input type="text" ng-model="UserData.FullName">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <ion-label>שם משתמש</ion-label>
+                    <input type="text" ng-model="UserData.UserName">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <ion-label>סיסמה</ion-label>
+                    <input type="password" ng-model="UserData.Password">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <ion-label>כתובת</ion-label>
+                    <input type="text" ng-model="UserData.City">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <ion-label>סטטוס</ion-label>
+                    <input type="text" value="">
+                </label>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

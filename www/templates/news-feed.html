@@ -1,0 +1,25 @@
+﻿<!-- (*) assigned classes -->
+
+<ion-view hide-nav-bar="true" class="MainPageMenuView">
+    <ion-content class="product-items-list" style="direction:rtl;">
+        <div class="MainPageMenuTop" style="border-bottom: 8px solid chocolate;">
+            <div style="border-bottom: 40px solid #fff;width:100%;height:100%;">
+                <div align="center">
+                    <img src="../img/paseflora-logo.png" class="imp-responsive img-paseflora-logo" style="width:90%;" />
+                </div>
+            </div>
+        </div>
+        <div class="row" style="padding:15px;">
+            <div class="col-xs-4 col-sm-4" style="margin-bottom:15px;float:right;" ng-repeat="product in ProductsList">
+                <div ng-click="goToPage({{product.ProductId}})" style="text-align:center;">
+                    <img class="rounded-circle" style="border: 5px solid chocolate;" width="135" height="135"  src="http://pde.smartmanager.online/{{product.ProductIconImage}}" />
+                    <div>
+                        <h4  ng-show="IsHebrew" style="color:#fff;text-align: center;">{{product.ProductName1}}</h4>
+                        <h4  ng-show="!IsHebrew" style="color:#fff;text-align: center;">{{product.ProductName2}}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>
