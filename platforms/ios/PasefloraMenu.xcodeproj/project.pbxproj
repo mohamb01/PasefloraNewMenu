@@ -38,6 +38,9 @@
 		5C745BC651EA4448A0C6284C /* GCDWebServerStreamedResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E58A5B83EA4745908BD1028E /* GCDWebServerStreamedResponse.m */; };
 		FFAF26712C8643569488B528 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD63A5A37AB4086A4E4CD25 /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		1B8AC303B0A14DDE8749030D /* CDVIonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED5E270455246808167C441 /* CDVIonicKeyboard.m */; };
+		8D3C1CD6EF70405DBF3B3FD6 /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = B546347A90B046F985DC9F48 /* CDVFile.m */; };
+		954A8FFED9674FB7AB92D881 /* CDVLocalFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = F41150ECAA624D18B9130FB5 /* CDVLocalFilesystem.m */; };
+		8D641EE67CA94790970D74FD /* CDVAssetLibraryFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A43558E723491688412304 /* CDVAssetLibraryFilesystem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +125,12 @@
 		2FD63A5A37AB4086A4E4CD25 /* WebKit.framework */ = {isa = PBXFileReference; name = "WebKit.framework"; path = "System/Library/Frameworks/WebKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		4ED5E270455246808167C441 /* CDVIonicKeyboard.m */ = {isa = PBXFileReference; name = "CDVIonicKeyboard.m"; path = "cordova-plugin-ionic-keyboard/CDVIonicKeyboard.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		66DF6DCD652543E8AF344681 /* CDVIonicKeyboard.h */ = {isa = PBXFileReference; name = "CDVIonicKeyboard.h"; path = "cordova-plugin-ionic-keyboard/CDVIonicKeyboard.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		B546347A90B046F985DC9F48 /* CDVFile.m */ = {isa = PBXFileReference; name = "CDVFile.m"; path = "cordova-plugin-file/CDVFile.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		F41150ECAA624D18B9130FB5 /* CDVLocalFilesystem.m */ = {isa = PBXFileReference; name = "CDVLocalFilesystem.m"; path = "cordova-plugin-file/CDVLocalFilesystem.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		05A43558E723491688412304 /* CDVAssetLibraryFilesystem.m */ = {isa = PBXFileReference; name = "CDVAssetLibraryFilesystem.m"; path = "cordova-plugin-file/CDVAssetLibraryFilesystem.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		572A1BE76A19438380A05025 /* CDVFile.h */ = {isa = PBXFileReference; name = "CDVFile.h"; path = "cordova-plugin-file/CDVFile.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		246DFE34C7424070AB4437C7 /* CDVLocalFilesystem.h */ = {isa = PBXFileReference; name = "CDVLocalFilesystem.h"; path = "cordova-plugin-file/CDVLocalFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		11372B9CF83F4282BEF5C7B3 /* CDVAssetLibraryFilesystem.h */ = {isa = PBXFileReference; name = "CDVAssetLibraryFilesystem.h"; path = "cordova-plugin-file/CDVAssetLibraryFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +280,12 @@
 				F76CEB53254D499CAD5CB71B /* GCDWebServerStreamedResponse.h */,
 				4ED5E270455246808167C441 /* CDVIonicKeyboard.m */,
 				66DF6DCD652543E8AF344681 /* CDVIonicKeyboard.h */,
+				B546347A90B046F985DC9F48 /* CDVFile.m */,
+				F41150ECAA624D18B9130FB5 /* CDVLocalFilesystem.m */,
+				05A43558E723491688412304 /* CDVAssetLibraryFilesystem.m */,
+				572A1BE76A19438380A05025 /* CDVFile.h */,
+				246DFE34C7424070AB4437C7 /* CDVLocalFilesystem.h */,
+				11372B9CF83F4282BEF5C7B3 /* CDVAssetLibraryFilesystem.h */,
 			);
 			name = Plugins;
 			path = "PasefloraMenu/Plugins";
@@ -403,6 +418,9 @@
 				3495ADD2D03D4A2A84B454AC /* GCDWebServerFileResponse.m in Sources */,
 				5C745BC651EA4448A0C6284C /* GCDWebServerStreamedResponse.m in Sources */,
 				1B8AC303B0A14DDE8749030D /* CDVIonicKeyboard.m in Sources */,
+				8D3C1CD6EF70405DBF3B3FD6 /* CDVFile.m in Sources */,
+				954A8FFED9674FB7AB92D881 /* CDVLocalFilesystem.m in Sources */,
+				8D641EE67CA94790970D74FD /* CDVAssetLibraryFilesystem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
