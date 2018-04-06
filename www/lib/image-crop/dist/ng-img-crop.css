@@ -1,0 +1,59 @@
+/* line 1, ../../source/scss/ng-img-crop.scss */
+img-crop {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+    /* line 7, ../../source/scss/ng-img-crop.scss */
+    img-crop canvas {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        outline: none;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        /* mobile webkit */
+    }
+
+.cropArea {
+    background: #000;
+    margin: auto;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+}
+
+    .cropArea.big {
+        width: 800px;
+        height: 600px;
+    }
+
+    .cropArea.medium {
+        width: 500px;
+        height: 350px;
+    }
+
+    .cropArea.small {
+        width: 100%;
+        height: 197px;
+    }
+
+    .button-crop-bar{
+      background-color: #E84D4D;
+      width:100%;
+      height:100%;
+      position:fixed;
+    }
+    .button-crop-bar .button{
+            width: 100%;
+            font-family:'almoni';
+            font-weight:700;
+            font-size:16px;
+            min-height:10px;
+    }
+

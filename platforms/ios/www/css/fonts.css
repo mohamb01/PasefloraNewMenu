@@ -1,0 +1,83 @@
+﻿@font-face {
+  font-family: "almoni-300";
+  src: url("fonts/almoni-dl-aaa-300.eot"); /* IE 9 */
+  src: url("fonts/almoni-dl-aaa-300.eot?") format("eot"), /* IE 6-8 */
+  url("fonts/almoni-dl-aaa-300.woff") format("woff"), /* Other browsers */
+  url("fonts/almoni-dl-aaa-300.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "almoni-400";
+  src: url("fonts/almoni-dl-aaa-400.eot"); /* IE 9 */
+  src: url("fonts/almoni-dl-aaa-400.eot?") format("eot"), /* IE 6-8 */
+  url("fonts/almoni-dl-aaa-400.woff") format("woff"), /* Other browsers */
+  url("fonts/almoni-dl-aaa-400.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "almoni-700";
+  src: url("fonts/almoni-dl-aaa-700.eot"); /* IE 9 */
+  src: url("fonts/almoni-dl-aaa-700.eot?") format("eot"), /* IE 6-8 */
+  url("fonts/almoni-dl-aaa-700.woff") format("woff"), /* Other browsers */
+  url("fonts/almoni-dl-aaa-700.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Arimo";
+  src: url("fonts/arimo/Arimo.eot"); /* IE 9 */
+  src: url("fonts/arimo/Arimo.eot?") format("eot"), /* IE 6-8 */
+  url("fonts/arimo/Arimo.woff") format("woff"), /* Other browsers */
+  url("fonts/arimo/Arimo.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TheSansArabic-SemiBold";
+  src: url("fonts/TheSansArabic-SemiBold.eot"); /* IE 9 */
+  src: url("fonts/TheSansArabic-SemiBold.eot?") format("eot"), /* IE 6-8 */
+  url("fonts/TheSansArabic-SemiBold.woff") format("woff"), /* Other browsers */
+  url("fonts/TheSansArabic-SemiBold.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal;
+  font-size:13px;
+}
+
+@font-face {
+  font-family: "TheSansArabic-Bold";
+  src: url("fonts/TheSansArabic-Bold.eot"); /* IE 9 */
+  src: url("fonts/TheSansArabic-Bold.eot?") format("eot"), /* IE 6-8 */
+  url("fonts/TheSansArabic-Bold.woff") format("woff"), /* Other browsers */
+  url("fonts/TheSansArabic-Bold.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal;
+  
+}
+
+
+@font-face {
+  font-family: 'Droid Arabic Naskh';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/DroidNaskh-Regular.eot);
+  src: url(fonts/DroidNaskh-Regular.eot?#iefix) format('embedded-opentype'),
+       url(fonts/DroidNaskh-Regular.woff2) format('woff2'),
+       url(fonts/DroidNaskh-Regular.woff) format('woff'),
+       url(fonts/DroidNaskh-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Droid Arabic Naskh Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url(fonts/DroidNaskh-Bold.eot);
+  src: url(fonts/DroidNaskh-Bold.eot?#iefix) format('embedded-opentype'),
+       url(fonts/DroidNaskh-Bold.woff2) format('woff2'),
+       url(fonts/DroidNaskh-Bold.woff) format('woff'),
+       url(fonts/DroidNaskh-Bold.ttf) format('truetype');
+}
+
+
+
