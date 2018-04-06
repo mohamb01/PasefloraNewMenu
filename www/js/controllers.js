@@ -70,6 +70,7 @@
         ProductImage: "", ItemsPerPage: 100, PageNumber: 0
     };
     $scope.GetProductsList = function (source) {
+		try {
         $rootScope.ShowLoadding();
 	    $scope.ProductsList = localStorage.getItem("ProductsList");
 		
@@ -90,6 +91,12 @@
 			$rootScope.HideLoadding();
 				//Stop the ion-refresher from spinning
 			$scope.$broadcast('scroll.refreshComplete');	
+			}
+		}
+		catch(err) {
+			$rootScope.HideLoadding();
+			alert(err.message);
+			
 		}
     }
   
