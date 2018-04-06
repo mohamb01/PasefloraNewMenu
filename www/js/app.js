@@ -47,6 +47,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'App.services', 'ngFi
         var bb = new Blob([ab], { type: type });
         return bb;
     };
+	
+	
   
 
   	$ionicPlatform.ready(function() {
