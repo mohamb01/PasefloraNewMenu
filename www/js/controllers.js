@@ -72,22 +72,29 @@
     $scope.GetProductsList = function (source) {
 		try {
         $rootScope.ShowLoadding();
+		alert("1");
 	    $scope.ProductsList = localStorage.getItem("ProductsList");
-		
+		alert("1");
+		alert(JSON.stringify($scope.ProductsList));
 		if($scope.ProductsList===null){
+			alert("3");
 			SMPasefloraProductService.GetProductsList($scope.Product).success(function (data) {
+				alert("4");
 				localStorage.setItem("ProductsList", JSON.stringify(data.ResultData));
 				$scope.ProductsList = JSON.parse(localStorage.getItem("ProductsList"));
 				$rootScope.HideLoadding();
 				//Stop the ion-refresher from spinning
 				$scope.$broadcast('scroll.refreshComplete');
 			}).error(function (err) {
+				alert("5");
 				$rootScope.HideLoadding();
 				$scope.ProductsList = {};
 				console.log(err);
 			});
 		}else{
+			alert("6");
 			$scope.ProductsList=JSON.parse(localStorage.getItem("ProductsList"));
+			alert("7");
 			$rootScope.HideLoadding();
 				//Stop the ion-refresher from spinning
 			$scope.$broadcast('scroll.refreshComplete');	
