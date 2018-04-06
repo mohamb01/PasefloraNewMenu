@@ -80,6 +80,7 @@
 			alert("3");
 			SMPasefloraProductService.GetProductsList($scope.Product).success(function (data) {
 				alert("4");
+				alert(JSON.stringify(data.ResultData));
 				localStorage.setItem("ProductsList", JSON.stringify(data.ResultData));
 				alert("5");
 				alert(localStorage.getItem("ProductsList"));
