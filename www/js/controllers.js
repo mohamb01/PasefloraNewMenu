@@ -74,14 +74,18 @@
         $rootScope.ShowLoadding();
 		alert("1");
 	    $scope.ProductsList = localStorage.getItem("ProductsList");
-		alert("1");
+		alert("2");
 		alert(JSON.stringify($scope.ProductsList));
 		if($scope.ProductsList===null){
 			alert("3");
 			SMPasefloraProductService.GetProductsList($scope.Product).success(function (data) {
 				alert("4");
 				localStorage.setItem("ProductsList", JSON.stringify(data.ResultData));
+				alert("5");
+				alert(localStorage.getItem("ProductsList"));
 				$scope.ProductsList = JSON.parse(localStorage.getItem("ProductsList"));
+				alert("6");
+				alert(JSON.stringify($scope.ProductsList));
 				$rootScope.HideLoadding();
 				//Stop the ion-refresher from spinning
 				$scope.$broadcast('scroll.refreshComplete');
