@@ -1,0 +1,25 @@
+﻿<!-- (*) assigned classes -->
+<ion-view view-title="רשימת נהגים">
+    <ion-nav-buttons side="right">
+        <a class="button button-icon icon ion-person-add btn-add-item" href="#/app/driver-edit/0"></a>
+</ion-nav-buttons>
+    <ion-content>
+        <ion-refresher on-refresh="doRefresh()" spinner="crescent">
+
+        </ion-refresher>
+        <ion-list>
+            <ion-item class="item-avatar" ng-repeat="item in DriversList">
+                <img src="img/27.jpg">
+                <h2>{{item.FullName}}</h2>
+                <p>{{item.CarNumber}} | {{item.City}}</p>
+                <!-- *class icon-view / show icon check -->
+                <a class="button button-outline ion-ios-trash-outline button-assertive btn-left-item"></a>
+                <a class="button button-outline ion-edit button-stable btn-left-item btn-left-item-edit" href="#/app/driver-edit/{{item.DriverId}}">
+
+                </a>
+                
+                
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

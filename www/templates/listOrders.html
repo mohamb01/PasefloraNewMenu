@@ -1,0 +1,48 @@
+﻿<!-- (*) assigned classes -->
+<ion-view view-title="רשימת הובלות">
+    <ion-nav-buttons side="right">
+        <a class="button button-icon icon ion-person-add btn-add-item" href="#/app/order-edit/0"></a>
+</ion-nav-buttons>
+    <ion-content>
+        <ion-refresher on-refresh="doRefresh()" spinner="crescent">
+
+        </ion-refresher>
+        <!-- *class input-search -->
+        <!--<div class="list list-inset input-search">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Search">
+            </label>
+        </div>-->
+        <!-- item-avatar with option button -->
+
+        <ion-list>
+            <ion-item  ng-repeat="item in OrdersList" class="olist-item">
+                <div class="row olist-row olist-row-1">
+                    <div class="col col-40 olist-row-1-right">
+                        <h2>{{item.CreatedDateStr}}</h2>
+                    </div>
+                    <div class="col col-60 text-left olist-row-1-left">
+                        <h2 class="olist-row-2-certificate">{{item.ShippingCertificateId}}#</h2>
+                    </div>
+                </div>
+                <div class="row  olist-row olist-row-2">
+                    <div class="col col-67 olist-row-2-right">
+                        <h3 class="olist-row-2-place">{{item.TransferPlace}} | {{item.DischargePlace}}</h3>
+                        <p class="olist-row-2-type">חול מחצבה</p>
+                    </div>
+                    <div class="col col-33 text-left olist-row-2-right">
+                        <div class="olist-amount">
+                            <span class="olist-digits">66.</span>
+                            <span class="olist-sum">22,960</span>
+                            <span class="olist-sign"></span>
+                            <span class="olist-currency">$</span>
+                        </div>
+                       
+                    </div>
+                </div>
+              
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

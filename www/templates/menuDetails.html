@@ -1,0 +1,53 @@
+﻿<ion-view  class="MenuView">
+    <ion-nav-bar class="bar-assertive">
+        <ion-nav-buttons side="right">
+            <div ng-click="goToHomePage()" style="margin: 28px 14px;padding: 14px;border: 1px dashed #cececc;border-radius: 15px;">
+              <span ng-show="IsHebrew" style="font-size:18px;margin-top: -6px;">חזור</span>
+               <span ng-show="!IsHebrew" style="font-size:18px;margin-top: -6px;">رجوع</span>
+            </div>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="left">
+            <div ng-click="ChangeLang()" style="margin: 28px 14px;padding: 14px;border: 1px dashed #cececc;border-radius: 15px;">
+               <span ng-show="IsHebrew" style="font-size:18px;margin-top: -6px;margin-right: -2px;">عربي</span>
+               <span ng-show="!IsHebrew" style="font-size:18px;margin-top: -6px;margin-right: -2px;">עברית</span>
+            </div>
+        </ion-nav-buttons>
+        <ion-nav-title>
+            <div ng-show="IsHebrew" style="font-size: 25px;font-weight: bold;margin-top: 15px;">{{ProductDetails.ProductName1}}</div>
+            <div ng-show="!IsHebrew" style="font-size: 25px;font-weight: bold;margin-top: 15px;">{{ProductDetails.ProductName2}}</div>
+        </ion-nav-title>
+
+    </ion-nav-bar>
+    <ion-content class="dark list-no-image-view columns-1">
+        <ul class="products ">
+            <li ng-repeat="item in ProductDetails.ProductItems" class="product type-product status-publish has-post-thumbnail product_cat-pizza first instock shipping-taxable purchasable product-type-simple addon-product">
+                <div class="product-outer">
+                    <div class="product-inner">
+                        <div class="product-content-wrapper">
+                            <a class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                <h2 ng-show="IsHebrew" class="woocommerce-loop-product__title">{{item.ItemName1}}</h2>
+                                <h2 ng-show="!IsHebrew" style="margin-top:-3px;" class="woocommerce-loop-product__title">{{item.ItemName2}}</h2>
+                                <div ng-show="item.ItemDesc1" class="woocommerce-product-details__short-description">
+                                    <p ng-show="IsHebrew" style="max-height: none;">{{item.ItemDesc1}}</p>
+                                    <p ng-show="!IsHebrew" style="max-height: none;">{{item.ItemDesc2}}</p>
+                                </div>
+                                <div class="yith_wapo_groups_container">
+                                    <div id="ywapo_value_1" class="ywapo_group_container ywapo_group_container_radio form-row form-row-wide " data-requested="1" data-type="radio" data-id="1" data-condition="">
+                                        <div class="ywapo_input_container ywapo_input_container_radio">
+                                            <input id="ywapo_ctrl_id_1_1" data-typeid="1" data-price="25.9" data-pricetype="fixed" data-index="1" type="radio" name="ywapo_radio_821[]" value="1" required="" class="ywapo_input ywapo_input_radio ywapo_price_fixed">
+                                            <span class="ywapo_label_price">
+                                                <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">₪ </span>{{item.ItemPrice}}</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- /.product-inner -->
+                </div>
+                <!-- /.product-outer -->
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>

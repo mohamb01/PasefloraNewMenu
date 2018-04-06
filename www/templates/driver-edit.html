@@ -1,0 +1,70 @@
+﻿<!-- (*) assigned classes -->
+<ion-view view-title="{{Title}}">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear btn-header-icon" ng-click="$ionicGoBack()">
+            חזור
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon btn-header-icon" ng-click="SaveDriver()">
+            שמור
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content>
+        <!-- *view-profile / container -->
+        <div class="view-profile">
+            <!-- *profile-bg / background color -->
+            <div class="profile-bg">
+                <a class="item item-avatar" nav-clear>
+                    <!-- *content-img / container -->
+                    <div class="content-img">
+                        <img src="img/92.jpg">
+                        <!-- *bg-img -->
+                        <div class="bg-img"></div>
+                    </div>
+                    <h2>{{DriverData.FullName}}</h2>
+                    <p>{{DriverData.CarNumber}}</p>
+                </a>
+            </div>
+            <!-- button bar with style FOLLOWER / FOLLOWING -->
+            <div class="button-bar">
+                <a class="button" href="#/app/followers">
+                    <h2>13520</h2>
+                    <p>FOLLOWER</p>
+                </a>
+                <a class="button">
+                    <h2>2450</h2>
+                    <p>FOLLOWING</p>
+                </a>
+            </div>
+            <!-- list with inputs style -->
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                    <ion-label>שם פרטי</ion-label>
+                    <input type="text" ng-model="DriverData.FullName">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <ion-label>מס' רכב</ion-label>
+                    <input type="text" ng-model="DriverData.CarNumber">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <ion-label>כתובת</ion-label>
+                    <input type="text" ng-model="DriverData.City">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <ion-label>מס' נייד</ion-label>
+                    <input type="text" ng-model="DriverData.MobileNumber">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <ion-label>מס' טלפון</ion-label>
+                    <input type="text" ng-model="DriverData.PhoneNumber">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <ion-label>דואר אלקטרוני</ion-label>
+                    <input type="text" ng-model="DriverData.Email">
+                </label>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

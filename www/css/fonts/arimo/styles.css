@@ -1,0 +1,8 @@
+
+@font-face {
+	font-family: 'Arimo-Italic';
+	src: url('Arimo-Italic.eot?') format('eot'), 
+	     url('Arimo-Italic.woff') format('woff'), 
+	     url('Arimo-Italic.ttf')  format('truetype'),
+	     url('Arimo-Italic.svg#Arimo-Italic') format('svg');
+}
