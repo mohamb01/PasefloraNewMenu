@@ -82,6 +82,7 @@
 				alert("4");
 				localStorage.setItem("ProductsList", JSON.stringify(data.ResultData));
 				alert("5");
+				alert(localStorage.getItem("ProductsList"));
 				$scope.ProductsList = JSON.parse(localStorage.getItem("ProductsList"));
 				alert("6");
 				alert(JSON.stringify($scope.ProductsList));
