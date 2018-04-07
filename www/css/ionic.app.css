@@ -3953,9 +3953,9 @@ a.subdued {
     .bar.bar-calm.bar-footer {
       background-image: linear-gradient(180deg, #454545, #454545 50%, transparent 50%); }
   .bar.bar-assertive {
-    border-color: #c00a27;
-    background-color: #c00a27;
-    background-image: linear-gradient(0deg, #c00a27, #c00a27 50%, transparent 50%);
+    border-color: chocolate;
+    background-color: chocolate;
+    background-image: linear-gradient(0deg, chocolate, chocolate 50%, transparent 50%);
     color: #fff; }
     .bar.bar-assertive .title {
       color: #fff; }
@@ -9865,9 +9865,9 @@ a.button {
 
 .bar.bar-assertive {
   background-image: none;
-  border-color: #c00a27; }
+  border-color: chocolate; }
   .bar.bar-assertive.bar-footer {
-    border-color: #c00a27; }
+    border-color: chocolate; }
 
 .bar.bar-balanced {
   background-image: none;

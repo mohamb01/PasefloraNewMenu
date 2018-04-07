@@ -280,4 +280,18 @@ app.factory('SMPasefloraProductItemService', function ($http) {
     }
 });
 
+app.factory('SMLookUpService', function ($http) {
+    return {
+        GetLookUpVersionNumber: function () {
+            return $http.post(Settings.Host + "/api/LookUp/", { ReqType: "GetLookUpDetails", ReqObject: { LookUpTableName: "SMVersion" } }, {
+                headers: { 'Content-Type': 'application/json' }
+            }).success(function (response) {
+                return response.ResultData;
+            }).error(function (err) {
+
+            })
+        }
+    }
+});
+
 

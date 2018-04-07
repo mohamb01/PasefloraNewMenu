@@ -28,8 +28,8 @@
                                 <h2 ng-show="IsHebrew" class="woocommerce-loop-product__title">{{item.ItemName1}}</h2>
                                 <h2 ng-show="!IsHebrew" style="margin-top:-3px;" class="woocommerce-loop-product__title">{{item.ItemName2}}</h2>
                                 <div ng-show="item.ItemDesc1" class="woocommerce-product-details__short-description">
-                                    <p ng-show="IsHebrew" style="max-height: none;">{{item.ItemDesc1}}</p>
-                                    <p ng-show="!IsHebrew" style="max-height: none;">{{item.ItemDesc2}}</p>
+                                    <p ng-show="IsHebrew" style="max-height: none;font-size: 17px; font-style: normal;">{{item.ItemDesc1}}</p>
+                                    <p ng-show="!IsHebrew" style="max-height: none;font-size: 17px; font-style: normal;">{{item.ItemDesc2}}</p>
                                 </div>
                                 <div class="yith_wapo_groups_container">
                                     <div id="ywapo_value_1" class="ywapo_group_container ywapo_group_container_radio form-row form-row-wide " data-requested="1" data-type="radio" data-id="1" data-condition="">
@@ -49,5 +49,11 @@
                 <!-- /.product-outer -->
             </li>
         </ul>
+		<div class="row" style="margin-top:30px;">
+			<div class="col-sm-12 col-md-12 col-xs-12" style="color:chocolate;">
+				<h2 ng-show="IsHebrew" style="text-align:center;">{{ProductDetails.ProductNotes1}}</h3>
+				<h2 ng-show="!IsHebrew" style="text-align:center;">{{ProductDetails.ProductNotes2}}</h3>
+			</div>
+		</div>
     </ion-content>
 </ion-view>
