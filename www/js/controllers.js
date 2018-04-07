@@ -72,34 +72,24 @@
     $scope.GetProductsList = function (source) {
 		try {
         $rootScope.ShowLoadding();
-		alert("1");
 	    $scope.ProductsList = localStorage.getItem("ProductsList");
-		alert("2");
-		alert(JSON.stringify($scope.ProductsList));
 		if($scope.ProductsList===null){
-			alert("3");
 			SMPasefloraProductService.GetProductsList($scope.Product).success(function (data) {
-				alert("4");
-				alert(JSON.stringify(data.ResultData));
 				localStorage.setItem("ProductsList", JSON.stringify(data.ResultData));
-				alert("5");
-				alert(localStorage.getItem("ProductsList"));
 				$scope.ProductsList = JSON.parse(localStorage.getItem("ProductsList"));
-				alert("6");
-				alert(JSON.stringify($scope.ProductsList));
+				$timeout(function () {
+					setImagesElements();
+				}, 5000);
 				$rootScope.HideLoadding();
 				//Stop the ion-refresher from spinning
 				$scope.$broadcast('scroll.refreshComplete');
 			}).error(function (err) {
-				alert("5");
 				$rootScope.HideLoadding();
 				$scope.ProductsList = {};
 				console.log(err);
 			});
 		}else{
-			alert("6");
 			$scope.ProductsList=JSON.parse(localStorage.getItem("ProductsList"));
-			alert("7");
 			$rootScope.HideLoadding();
 				//Stop the ion-refresher from spinning
 			$scope.$broadcast('scroll.refreshComplete');	
@@ -111,7 +101,88 @@
 			
 		}
     }
-  
+	function ImageElement(imgElement, imgCanvas, imgContext) {
+	  this.imgElement = imgElement;
+	  this.imgCanvas = imgCanvas;
+	  this.imgContext = imgContext;
+	}
+	
+	
+	 $scope.getImageSrcData= function (oldSrc,elementId) {
+       var elementSrc = localStorage.getItem(elementId);
+	   if(elementSrc===null){
+		 return oldSrc;
+	   }else{
+		   if(typeof localStorage[elementId] !== "undefined"){
+				return elementSrc;
+		   }
+		   return oldSrc;
+	   }
+    };
+	
+      /*
+	   function SetProductImageSVGData(productId,oldImageSrc){
+		        debugger;
+				var curEl = new ImageElement(document.createElement("img"), document.createElement("canvas"), document.createElement("canvas").getContext("2d"));
+				curEl.imgElement.setAttribute("id","product_img_"+productId);
+				curEl.imgElement.crossOrigin = "Anonymous";
+				curEl.imgElement.src ="http://my-hashtag.com"+oldImageSrc;
+				curEl.imgElement.addEventListener("load", function () {
+					curEl.imgCanvas.width = this.width;
+					curEl.imgCanvas.height = this.height;
+
+					// Draw image into canvas element
+					curEl.imgContext.drawImage(this, 0, 0, this.width, this.height);
+
+					// Save image as a data URL
+					var storageFiles = curEl.imgCanvas.toDataURL("image/png");
+					storageFiles=storageFiles.replace(/^data:image\/(png|jpg);base64,/, "");
+					// Save as JSON in localStorage
+					try {
+						localStorage.setItem(this.id, storageFiles);
+					}
+					catch (e) {
+						console.log("Storage failed: " + e);
+					}
+					
+			   }, false); 
+	   }
+	   */
+	   
+	   function getBase64Image(img,srcUrl) {
+			 img.crossOrigin = "Anonymous";
+			 img.addEventListener("load", function () {
+				var imgCanvas = document.createElement("canvas"),
+					imgContext = imgCanvas.getContext("2d");
+
+				// Make sure canvas is as big as the picture
+				imgCanvas.width = img.width;
+				imgCanvas.height = img.height;
+
+				// Draw image into canvas element
+				imgContext.drawImage(img, 0, 0, img.width, img.height);
+
+				// Save image as a data URL
+				var storageFiles = imgCanvas.toDataURL("image/png");
+
+				// Save as JSON in localStorage
+				try {
+				    img.src=storageFiles;
+					localStorage.setItem(img.id, storageFiles);
+				}
+				catch (e) {
+					console.log("Storage failed: " + e);
+				}
+			}, false);
+			img.src=srcUrl;
+	}
+	   
+	   function setImagesElements(){
+		var elementsList = [];
+		for(var i=0;i<$scope.ProductsList.length;i++){
+			 getBase64Image(document.getElementById("product_img_"+$scope.ProductsList[i].ProductId),"http://my-hashtag.com"+$scope.ProductsList[i].ProductIconImage);
+		}
+	 }
     $scope.goToPage= function (id) {
         $state.go('app.menuDetails', { "Id": id});
     };

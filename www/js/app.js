@@ -63,6 +63,13 @@ angular.module('starter', ['ionic', 'starter.controllers', 'App.services', 'ngFi
 		}
   	});
 })
+.directive('emitLastRepeaterElement', function() {
+	return function(scope) {
+	if (scope.$last){
+		scope.$emit('LastRepeaterElement');
+	}
+	};
+})
 
 .config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 
