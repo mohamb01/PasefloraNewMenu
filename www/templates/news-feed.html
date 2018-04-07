@@ -3,17 +3,23 @@
 <ion-view hide-nav-bar="true" class="MainPageMenuView">
     <ion-content class="product-items-list" style="direction:rtl;">
         <div class="MainPageMenuTop" style="border-bottom: 8px solid chocolate;">
+		    <div ng-click="ChangeLang()" style="position:absolute;left:0; margin: 28px 14px;padding: 10px;border: 1px dashed #cececc;border-radius: 15px;">
+				   <span ng-show="IsHebrew" style="font-size:18px;margin-top: -6px;margin-right: -2px;color: #fff;">عربي</span>
+				   <span ng-show="!IsHebrew" style="font-size:18px;margin-top: -6px;margin-right: -2px;color: #fff;">עברית</span>
+            </div>
             <div style="border-bottom: 40px solid #fff;width:100%;height:100%;">
                 <div align="center">
                     <img src="{{TopLogoSrc}}" class="imp-responsive img-paseflora-logo" style="width:90%;" />
                 </div>
+				
             </div>
+			 
         </div>
         <div class="row" style="padding:15px;">
             <div class="col-xs-4 col-sm-4" style="margin-bottom:15px;float:right;" ng-repeat="product in ProductsList" emit-last-repeater-element>
                 <div ng-click="goToPage({{product.ProductId}})" style="text-align:center;">
                     <img id="product_img_{{product.ProductId}}" class="cls_product_img rounded-circle" style="border: 5px solid chocolate;" width="135" height="135"  
-					src="{{getImageSrcData('http://my-hashtag.com'+product.ProductIconImage,'product_img_'+product.ProductId)}}" />
+					src="{{getImageSrcData('http://pdeimages.smartmanager.online'+product.ProductIconImage,'product_img_'+product.ProductId)}}" />
                     <div>
                         <h4  ng-show="IsHebrew" style="color:#fff;text-align: center;">{{product.ProductName1}}</h4>
                         <h4  ng-show="!IsHebrew" style="color:#fff;text-align: center;">{{product.ProductName2}}</h4>
