@@ -10,9 +10,10 @@
             </div>
         </div>
         <div class="row" style="padding:15px;">
-            <div class="col-xs-4 col-sm-4" style="margin-bottom:15px;float:right;" ng-repeat="product in ProductsList">
+            <div class="col-xs-4 col-sm-4" style="margin-bottom:15px;float:right;" ng-repeat="product in ProductsList" emit-last-repeater-element>
                 <div ng-click="goToPage({{product.ProductId}})" style="text-align:center;">
-                    <img id="product_img_{{product.ProductId}}" class="rounded-circle" style="border: 5px solid chocolate;" width="135" height="135"  src="{{product.ProductIconImage}}" />
+                    <img id="product_img_{{product.ProductId}}" class="cls_product_img rounded-circle" style="border: 5px solid chocolate;" width="135" height="135"  
+					src="{{getImageSrcData('http://my-hashtag.com'+product.ProductIconImage,'product_img_'+product.ProductId)}}" />
                     <div>
                         <h4  ng-show="IsHebrew" style="color:#fff;text-align: center;">{{product.ProductName1}}</h4>
                         <h4  ng-show="!IsHebrew" style="color:#fff;text-align: center;">{{product.ProductName2}}</h4>
@@ -20,8 +21,8 @@
                 </div>
             </div>
         </div>
-	<div data-ng-init="onloadFun()">
 		
-	  </div>
     </ion-content>
 </ion-view>
+
+
